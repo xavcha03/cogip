@@ -16,9 +16,13 @@
         </div>
     </header>
     <div>
+        <p><input type="button" value="backhome"
+                onclick="location.href='http://localhost/travailgithub/travailgroupe/cogipp/cogip/Resources/views/dashboard/homedashboad.php'">
         <p>
-            <a href="./invoicesdashboard.php">Invoices
-            </a>
+        <p>
+        <p><input type="button" value="back" onclick="history.back()"></p>
+        <a href="./invoicesdashboard.php">Invoices
+        </a>
         </p>
         <p><a href="./companiesdashboard.php">Companies</a></p>
         <p><a href="./contactdashboard.php">Contacts</a></p>
