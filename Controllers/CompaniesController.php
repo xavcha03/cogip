@@ -21,4 +21,11 @@ class CompaniesController extends Controller
             return $this->view('addTypeNotOK', ["type" => $type]);
         }
     }
+
+    /**
+     * Supprimer un type d'entreprise
+     */
+    public function deleteType()
+    {
+    }
 }
