@@ -11,3 +11,6 @@ composer install
 ```terminal
 php -S localhost:8000 -t public 
 ```
+
+3. Trello
+   https://trello.com/b/PAt79HLu/cogip
