@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <h1>Ajout d'un type entreprise OK</h1>
-    <p>L'ajout de type <?= $type ?> à bien été réalisé</p>
+    <h1>Erreur d'Ajout d'un type entreprise</h1>
+    <p>L'ajout de type <?= $type ?> N'a pu être réalisée</p>
 </body>
 
 </html>
