@@ -1,0 +1,52 @@
+hr{
+    background-color: $color-primary;
+    width: 1100px;
+    margin:50px;
+}
+
+.first-section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+h2{
+    border: 3px solid $color-primary;
+    width: 200px;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: space-around;
+    gap:20px
+}
+
+a{
+    color: $color-secondary;
+}
+
+.iconify_contact{
+    color:$color-primary;
+    
+}
+
+.iconify{
+    color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+

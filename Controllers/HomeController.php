@@ -13,4 +13,12 @@ class HomeController extends Controller
     {
         return $this->view('welcome',["name" => "Cogip"]);
     }
+    
+    /*
+    * return view
+    */
+    public function test()
+    {
+        return $this->view('body',[]);
+    }
 }

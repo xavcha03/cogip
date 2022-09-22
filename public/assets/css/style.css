@@ -1,0 +1,189 @@
+.header {
+  position: absolute;
+  width: 1193px;
+  height: 56px;
+  top: 95px;
+  left: 123px;
+  top: 112px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F9DE4E;
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.login {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+.login a {
+  color: #000000;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.nav a {
+  color: #000000;
+}
+
+.button {
+  width: 65.55px;
+  height: 30px;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.signUp {
+  width: 100.76px;
+  height: 37.89px;
+  top: 112px;
+  left: 1135.31px;
+  border-radius: 50px;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+}
+
+.container {
+  padding-left: 10px 10px;
+  width: 1440px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 79px;
+  background-color: #F9DE4E;
+}
+.title img {
+  width: 780px;
+}
+
+table {
+  width: 1193px;
+}
+
+tr {
+  background-color: #F9DE4E;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 55px;
+}
+
+th {
+  background-color: #F9DE4E;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 55px;
+}
+
+h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 73px;
+}
+
+.row tr:nth-child(even) {
+  background-color: gray;
+}
+
+.row tr:nth-child(odd) {
+  background-color: darkgray;
+}
+
+.slogan {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  padding-top: 200px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 68px;
+  line-height: 82px;
+}
+.slogan .img_1 {
+  width: 487px;
+  position: absolute;
+}
+.slogan .img_2 {
+  position: absolute;
+}
+
+.project {
+  width: 300px;
+  float: right;
+}
+
+hr {
+  background-color: #F9DE4E;
+  width: 1100px;
+  margin: 50px;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+h2 {
+  border: 3px solid #F9DE4E;
+  width: 200px;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+a {
+  color: #000000;
+}
+
+.iconify_contact {
+  color: #F9DE4E;
+}
+
+.iconify {
+  color: #F9DE4E;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -12,6 +12,10 @@ $router = new Router();
 $router->get('/', function () {
     (new HomeController)->index();
 });
+//acceuil
+$router->get('/home', function () {
+    (new HomeController)->test();
+});
 
 
 
