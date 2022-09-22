@@ -17,6 +17,8 @@ $router->get('/home', function () {
     (new HomeController)->test();
 });
 
+//
+
 
 
 //------------- DashBoard
@@ -34,9 +36,9 @@ $router->post('/dashboard/companies/type', function () {
 /**
  * Delete a company Type
  */
-// $router->delete('dashboard/companies/type', function(){
-//     (new CompaniesController)->deleteType();
-// })
+$router->delete('dashboard/companies/type', function(){
+    (new CompaniesController)->deleteType();
+ });
 
 
 
