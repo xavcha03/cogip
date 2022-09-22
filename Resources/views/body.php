@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
-    <title>Body</title>
-</head>
-<body>
+
     <section class="container">
     <div class="title" >
         <h1>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
-        <img class="img_1" src="../../public/assets/img/Project Manager (4) 1.png" alt="icone worker">
-        <img class="img_2" src="../../public/assets/img/Rectangle 10.png">
+        <img class="img_1" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
+        <img class="img_2" src="/assets/img/Rectangle 10.png">
     </div> 
     
     <div class="table">
@@ -59,7 +50,7 @@
         </tbody>
         </table>
         
-        <img class="project" src="../../public/assets/img/Project Manager (16) 1.png" alt="icone project">
+        <img class="project" src="assets/img/Project Manager (16) 1.png" alt="icone project">
         
     <div class="table">
         <h2>Last Contacts</h2>
@@ -112,7 +103,7 @@
    </tbody>
     </table>
 
-   <img src="../../public/assets/img/lamp.png"  alt="icone lamp"> 
+   <img src="assets/img/lamp.png"  alt="icone lamp"> 
 
    <div class="table">
     <h2>Last companies</h2>
@@ -167,11 +158,9 @@
 </div>
     <div class="slogan" >
         <h2>WORKER BETTER IN YOUR COMPANY</h2>
-        <img class="img_3" src="../../public/assets/img/Project Manager (19) 1.png" alt="cogip logo" alt="icone work ">
-        <img class="img_4" src="../../public/assets/img/Rectangle 17.png">
+        <img class="img_3" src="assets/img/Project Manager (19) 1.png" alt="cogip logo" alt="icone work ">
+        <img class="img_4" src="assets/img/Rectangle 17.png">
 
     </div> 
     <hr>
 </section>
-</body>
-</ht

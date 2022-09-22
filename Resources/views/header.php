@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/assets/css/reset.css">
-    <link rel="stylesheet" href="../../public/assets/css/style.css ">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css ">
     <title>Header</title>
 </head>
 <body>
@@ -22,5 +22,3 @@
         <a href="/Login">Login</a>   
         </nav>
     </header>
-</body>
-</html>
