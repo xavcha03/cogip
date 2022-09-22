@@ -22,4 +22,51 @@ class CompanyModel extends Model
         $isDone = $stm->execute();
         return $isDone;
     }
+    public function deleteType($type)
+    {
+        //Création de la requete
+        $query = "DELETE FROM types where name = 'name'";
+        //Préparation
+        $stm = $this->db->prepare($query);
+        //execution de la requete
+        $isDone = $stm->execute();
+        return $isDone;
+    }
+    public function addCompany($company)
+    {
+        //Création de la requete
+        $query = "INSERT INTO companies (name, 	type_id, country, tva, created_at, updated_at) 
+        VALUES (:name, :type_id, :country, :tva, NOW(), NOW())";
+        //Préparation
+        $stm = $this->db->prepare($query);
+        //Ajout des données
+        $stm->bindParam(":name", $company['name']);
+        $stm->bindParam(":type_id", $company['type_id']);
+        $stm->bindParam(":country", $company['country']);
+        $stm->bindParam(":tva", $company['tva']);
+        //execution de la requete
+        $isDone = $stm->execute();
+        return $isDone;
+    }
+    public function deleteCompany($company)
+    {
+        //Création de la requete
+        $query = "DELETE FROM companies where name = 'name'";
+        //Préparation
+        $stm = $this->db->prepare($query);
+        //execution de la requete
+        $isDone = $stm->execute();
+        return $isDone;
+    }
+    public function updateCompany($company)
+    {
+        //Création de la requete
+        $query = "UPDATE companies set
+        name='name', type_id='type_id', country='country', tva='tva', where id='id'";
+        //Préparation
+        $stm = $this->db->prepare($query);
+        //execution de la requete
+        $isDone = $stm->execute();
+        return $isDone;
+    }
 }

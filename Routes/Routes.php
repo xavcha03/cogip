@@ -14,8 +14,23 @@ $router->get('/', function () {
 $router->post('/dashboard/companies/type', function () {
     (new CompaniesController)->addType();
 });
+$router->delete('/dashboard/companies/type', function () {
+    (new CompaniesController)->deleteType();
+});
+$router->get('/dashboard/companies/type', function () {
+    (new CompaniesController)->updateType();
+});
 $router->get('/invoice', function () {
     (new CompaniesController)->addType();
+});
+$router->post('/dashboard/companies', function () {
+    (new CompaniesController)->addCompany();
+});
+$router->delete('/dashboard/companies', function () {
+    (new CompaniesController)->deleteCompany();
+});
+$router->get('/dashboard/companies', function () {
+    (new CompaniesController)->updateCompany();
 });
 
 $router->run();
