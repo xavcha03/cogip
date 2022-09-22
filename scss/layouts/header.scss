@@ -1,10 +1,8 @@
 .header{
-    
-    width: 1193px;
+    width: 1440px;
     height: 56px;
-    top: 95px;
-    left: 123px;
-    top: 112px;
+    margin:0 auto;
+    padding-top: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -36,6 +34,7 @@
     display: flex;
     flex-direction: row;
     gap:20px;
+    line-height: 100px;
         a{
         color:$color-secondary;
         }
@@ -43,12 +42,13 @@
 }
 
 
-.button{
-width: 65.55px;
-height: 30px;
-border:1px solid black;
-align-items: center;
-}
+// .button{
+// width: 65.55px;
+// height: 30px;
+// line-height: 100px;
+// border:1px solid black;
+// align-items: center;
+// }
 
 .signUp{
     width: 100.76px;

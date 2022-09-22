@@ -1,7 +1,7 @@
 
     <section class="container">
     <div class="title" >
-        <h1>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
+        <h3>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h3>
         <img class="img_1" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
         <img class="img_2" src="/assets/img/Rectangle 10.png">
     </div> 
@@ -49,7 +49,6 @@
         </tr>
         </tbody>
         </table>
-        
         <img class="project" src="assets/img/Project Manager (16) 1.png" alt="icone project">
         
     <div class="table">
@@ -157,7 +156,7 @@
     </table>
 </div>
     <div class="slogan" >
-        <h2>WORKER BETTER IN YOUR COMPANY</h2>
+        <h3>WORKER BETTER IN YOUR COMPANY</h3>
         <img class="img_3" src="assets/img/Project Manager (19) 1.png" alt="cogip logo" alt="icone work ">
         <img class="img_4" src="assets/img/Rectangle 17.png">
 

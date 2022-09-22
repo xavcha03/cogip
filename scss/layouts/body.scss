@@ -2,8 +2,6 @@
     padding-left: 10px 10px;
     width: 1440px;
     margin:0 auto;
-    border: 1px solid #ccc;
-    
 }
 
 
@@ -13,19 +11,19 @@
     width: 100%;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 900;
-    font-size: 65px;
+    font-weight: 600;
+    font-size: 50px;
     line-height: 79px;
     background-color: $color-primary;
+    position: relative;
     
-    img{
-        width: 780px;
-    }
+
 }
 
 
 table{
     width: 1193px;
+    margin-left: 120px;
 }
 
 tr{
@@ -39,12 +37,13 @@ tr{
 
 
 th{
-    background-color: $color-primary;
-    font-family: 'Roboto';
+background-color: $color-primary;
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 600;
 font-size: 20px;
 line-height: 55px;
+text-align: left;
 }
 
 
@@ -54,13 +53,21 @@ font-style: normal;
 font-weight: 900;
 font-size: 60px;
 line-height: 73px;
+margin-left: 120px;
+margin-bottom:30px;
+}
+
+h3{
+    width: 580px;
+    padding:120px;
+    margin-left: 100px;
 }
 
 .row tr:nth-child(even){
-    background-color:gray;
+    background-color:$color-grey;
 }
 .row tr:nth-child(odd){
-    background-color:darkgray;
+    background-color:$color_white;
 }
 
 .slogan{
@@ -73,16 +80,35 @@ line-height: 73px;
     font-weight: 900;
     font-size: 68px;
     line-height: 82px; 
+    position:relative;
+    .img_3{
+        position:absolute;
+        left:210%;
+        transform: translateX(-50%); 
+        z-index: 10;    
+    }
+
+    .img_4{
+        position:absolute;
+        left:210%;
+        transform: translateX(-50%);
+    }
+
+}
 
     .img_1{
-        width: 487px;
-        position: absolute;
+        width: 600px;
+        margin-bottom: 75px;
+        
     }
 
     .img_2{
         position: absolute;
+        bottom:0;
+        left:55%;
+        transform: translateX(-50%);
     }
-}
+
 
 .project{
     width:300px;

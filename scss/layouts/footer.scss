@@ -21,16 +21,6 @@ p{
     gap:10px;
 }
 
-h2{
-    border: 3px solid $color-primary;
-    width: 200px;
-}
-
-.nav-footer{
-    display: flex;
-    justify-content: space-around;
-    gap:20px
-}
 
 a{
     color: $color-secondary;
@@ -48,5 +38,11 @@ a{
 
 }
 
+.nav-footer{
+    display: flex;
+    justify-content: space-around;
+    gap:20px;
+    margin-bottom: 100px;
+}
 
 

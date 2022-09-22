@@ -1,6 +1,6 @@
 
 <footer class="footer">
-        <hr>
+        
         <div class="first-section">
         <h2>COGIP</h2>
         <div class="contact-us">
