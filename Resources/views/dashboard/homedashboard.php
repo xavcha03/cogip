@@ -41,8 +41,6 @@
 
                     </div>
                 </div>
-                <footer> <?php include './footerdashboard.php' ?></footer>
 
-</body>
 
 </html>

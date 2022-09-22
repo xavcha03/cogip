@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="footerdashboard.css">
 
@@ -17,4 +17,4 @@
     </div>
 </body>
 
-</html>
+</html> -->

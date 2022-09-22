@@ -25,15 +25,27 @@
         <p>
         <p>
         <p><input type="button" value="back" onclick="history.back()"></p>
-        <p><a href="./homedashboard.php">Dashboard</a></p>
+        <p><a href="../../homedashboad.php">Dashboard</a></p>
         <a href="./invoicesdashboard.php">Invoices
         </a>
         </p>
         <p><a href="./companiesdashboard.php">Companies</a></p>
         <p><a href="./contactdashboard.php">Contacts</a></p>
+        <!-- <div class="footerAsideDasboard">
+            <p class="separationFooterAside">
+                <hr>
+            </p>
+            <!-- <p class="imagefooterdashboard"><img src="../../../public/assets/img/malepicture.jpg" alt="photohenry"></p>
+            <p class="logoutDashboard"><input type="button" value="Logout"></p> -->
 
-    </div>
 
 </body>
+<footer>
+    <p class="separationFooterAside">
+        <hr>
+    </p>
+    <p class="imagefooterdashboard"><img src="../../../public/assets/img/malepicture.jpg" alt="photohenry"></p>
+    <p class="logoutDashboard"><input type="button" value="Logout"></p>
+</footer>
 
 </html>
