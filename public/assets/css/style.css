@@ -1,8 +1,6 @@
 .header {
-  width: 1440px;
+  width: 100%;
   height: 56px;
-  margin: 0 auto;
-  padding-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -47,9 +45,7 @@
 }
 
 .container {
-  padding-left: 10px 10px;
-  width: 1440px;
-  margin: 0 auto;
+  padding: 10px 10px;
 }
 
 .title {
@@ -62,12 +58,12 @@
   font-size: 50px;
   line-height: 79px;
   background-color: #F9DE4E;
-  position: relative;
 }
 
 table {
   width: 1193px;
   margin-left: 120px;
+  position: relative;
 }
 
 tr {
@@ -113,6 +109,20 @@ h3 {
   background-color: #FFFFFF;
 }
 
+.hr_footer {
+  background-color: #F9DE4E;
+  width: 1074px;
+  height: 2px;
+  border: none;
+  left: 13%;
+  right: 13%;
+  bottom: 81%;
+}
+
+hr {
+  width: 1074px;
+}
+
 .slogan {
   display: flex;
   justify-content: space-between;
@@ -125,39 +135,16 @@ h3 {
   line-height: 82px;
   position: relative;
 }
-.slogan .img_3 {
+.slogan .img_work {
   position: absolute;
   left: 210%;
   transform: translateX(-50%);
   z-index: 10;
 }
-.slogan .img_4 {
+.slogan .img_rectangle_17 {
   position: absolute;
   left: 210%;
   transform: translateX(-50%);
-}
-
-.img_1 {
-  width: 600px;
-  margin-bottom: 75px;
-}
-
-.img_2 {
-  position: absolute;
-  bottom: 0;
-  left: 55%;
-  transform: translateX(-50%);
-}
-
-.project {
-  width: 300px;
-  float: right;
-}
-
-hr {
-  background-color: #F9DE4E;
-  width: 1100px;
-  margin: 50px;
 }
 
 .first-section {

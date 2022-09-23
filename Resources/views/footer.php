@@ -1,4 +1,10 @@
 
+<section class="slogan">
+    <h3>WORKER BETTER IN YOUR COMPANY</h3>
+    <img class="img_work" src="assets/img/Project Manager (19) 1.png" alt="cogip logo" alt="icone work ">
+    <img class="img_rectangle_17" src="assets/img/Rectangle 17.png">
+</section>
+<hr class="hr_footer">
 <footer class="footer">
         
         <div class="first-section">
@@ -6,10 +12,9 @@
         <div class="contact-us">
         <p class="adress">
         <iconify-icon class="iconify_contact" icon="gis:position-o"></iconify-icon>
-        Square des Martyrs, 6000 Charleroi
-        </p>
+        Square des Martyrs, 6000 Charleroi</p><br>
         <p><iconify-icon class="iconify_contact" icon="noto-v1:telephone-receiver"></iconify-icon>(0123)236 5987<iconify-icon class="iconify"icon="material-symbols:fax-outline-sharp"></iconify-icon>(0123)236 5999</p>
-        
+        <br>
         <section class="iconify">
             <p style="color:black">Social Media</p>
             <iconify-icon icon="akar-icons:whatsapp-fill"></iconify-icon>
