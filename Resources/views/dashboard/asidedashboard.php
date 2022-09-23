@@ -48,5 +48,3 @@
     <p class="logoutDashboard"><input type="button" value="Logout"></p>
     <p><?php include './footerdashboard.php' ?></p>
 </footer>
-
-</html>
