@@ -25,6 +25,6 @@
     </header>
     <div class="title">
             <h3>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h3>
-            <img class="img_1" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
-            <img class="img_2" src="/assets/img/Rectangle 10.png">
+            <img class="img_Pmanager" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
+            <img class="img_rectangle" src="/assets/img/Rectangle 10.png">
         </div>

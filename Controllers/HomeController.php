@@ -11,7 +11,7 @@ class HomeController extends Controller
     */
     public function index()
     {
-        return $this->view('welcome',["name" => "Cogip"]);
+        return $this->view('front-end/body',["name" => "Cogip"]);
     }
     
     /*
@@ -19,6 +19,6 @@ class HomeController extends Controller
     */
     public function test()
     {
-        return $this->view('body',[]);
+        return $this->view('front-end/body',[]);
     }
 }
