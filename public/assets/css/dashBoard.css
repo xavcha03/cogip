@@ -366,5 +366,34 @@ body {
   font-weight: 700;
   font-size: 15px;
 }
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  font: "Inter", sans-serif;
+}
+.form__input, .form__select, .form__button {
+  height: 60px;
+  background-color: #F5F5FB;
+  border: none;
+  padding-left: 45px;
+}
+.form__input {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+}
+.form__select {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+}
+.form__button {
+  background-color: #9698D6;
+  color: white;
+  text-align: start;
+  font-weight: 400;
+  font-size: 20px;
+}
 
 /*# sourceMappingURL=dashBoard.css.map */
