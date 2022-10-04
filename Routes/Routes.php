@@ -26,8 +26,8 @@ $router->get('/invoice', function () {
 $router->post('/dashboard/companies', function () {
     (new CompaniesController)->addCompany();
 });
-$router->delete('/dashboard/companies', function () {
-    (new CompaniesController)->deleteCompany();
+$router->delete('/dashboard/companies/(\d+)', function ($companyId) {
+    (new CompaniesController)->deleteCompany($companyId);
 });
 $router->get('/dashboard/companies', function () {
     (new CompaniesController)->updateCompany();

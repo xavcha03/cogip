@@ -51,7 +51,7 @@ class CompanyModel extends Model
     public function deleteCompany($company)
     {
         //Création de la requete
-        $query = "DELETE FROM companies where name = 'name'";
+        $query = "DELETE FROM companies where id = 'id'";
         //Préparation
         $stm = $this->db->prepare($query);
         //execution de la requete

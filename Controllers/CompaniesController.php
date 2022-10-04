@@ -59,7 +59,7 @@ class CompaniesController extends Controller
             return $this->view('addCompanyNotOK', ["company" => $company]);
         }
     }
-    public function deleteCompany()
+    public function deleteCompany($companyId)
     {
         $company=[];
         
