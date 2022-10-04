@@ -27,5 +27,9 @@ class CompaniesController extends Controller
      */
     public function deleteType()
     {
+        $typeId = $_GET['typeID'];
+
+        $model = new CompanyModel();
+        $model->deleteType($typeId);
     }
 }

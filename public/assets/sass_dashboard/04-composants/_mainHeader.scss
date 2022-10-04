@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 54px;
+        height: 100%;
+    }
+
+
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 69px;
+
+        h1 {
+            font-family: $font-secondary;
+            font-weight: 900;
+            font-size: 30px;
+        }
+
+        h2 {
+            font-family: $font-secondary;
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+
+    &__welcomeMsg {
+        background-color: $color-primary;
+        border-radius: 10px;
+        padding: 57px 54px;
+
+        &__title {
+            font-family: $font-secondary;
+            font-weight: 700;
+            font-size: 35px;
+            color: white;
+        }
+
+        &__pageDescription {
+            font-family: $font-secondary;
+            font-weight: 300;
+            font-size: 15px;
+            color: white;
+            width: 285px;
+
+        }
+    }
+
+
+}

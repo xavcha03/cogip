@@ -25,7 +25,11 @@ class ComposerAutoloaderInit42133d2fc147ddab58b993dd24af42b9
         require __DIR__ . '/platform_check.php';
 
         spl_autoload_register(array('ComposerAutoloaderInit42133d2fc147ddab58b993dd24af42b9', 'loadClassLoader'), true, true);
+<<<<<<< HEAD
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
+=======
+        self::$loader = $loader = new \Composer\Autoload\ClassLoader();
+>>>>>>> dev
         spl_autoload_unregister(array('ComposerAutoloaderInit42133d2fc147ddab58b993dd24af42b9', 'loadClassLoader'));
 
         require __DIR__ . '/autoload_static.php';
