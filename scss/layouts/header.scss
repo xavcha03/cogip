@@ -1,0 +1,63 @@
+.header{
+    position: absolute;
+    width: 1193px;
+    height: 56px;
+    top: 95px;
+    left: 123px;
+    top: 112px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    
+    // @media only screen and (min-width: 600px) {
+    //         display: flex;
+    //         flex-direction: column;
+    // }
+    
+}
+
+.login{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+        a{
+        color: $color-secondary;
+        }
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+        a{
+        color:$color-secondary;
+        }
+
+}
+
+
+.button{
+width: 65.55px;
+height: 30px;
+border:1px solid black;
+align-items: center;
+}
+
+.signUp{
+    width: 100.76px;
+    height: 37.89px;
+    top: 112px;
+    left: 1135.31px;
+    border-radius: 50px;
+    text-align: center;
+    color: $color-secondary;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $color-white;
+}

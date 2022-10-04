@@ -68,5 +68,14 @@ class CompanyModel extends Model
         //execution de la requete
         $isDone = $stm->execute();
         return $isDone;
+
+    /**
+     * Delete a type of company with an ID
+     */
+    public function deleteType($id){
+        $query = "DELETE FROM types WHERE id = :idType";
+        $stm = $this->db->prepare($query);
+        $stm->bindParam("idType", $id);
+        $stm->execute;
     }
 }

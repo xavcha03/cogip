@@ -1,0 +1,65 @@
+.nav {
+    margin-top: 56px;
+
+
+    &__linksList {
+
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        &__item {}
+    }
+
+    &__link {
+        border-right: 4px solid transparent;
+        text-decoration: none;
+        color: black;
+        font-family: $font-secondary;
+        font-weight: 400;
+        font-size: 20px;
+        display: inline-block;
+        width: 100%;
+        padding-left: 40px;
+
+
+        &--selected {
+            border-right: 4px solid $color-primary;
+            font-weight: 600;
+
+        }
+
+        //Icones
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 27px;
+            transform: translateY(2px);
+
+        }
+
+        &--dashBoard::before {
+            background-image: url('../img/Icon_dashboard.svg');
+
+        }
+
+        &--invoices::before {
+            background-image: url('../img/Icon_Invoices.svg');
+
+        }
+
+        &--companies::before {
+            background-image: url('../img/Icon_Companies.svg');
+
+        }
+
+        &--contact::before {
+            background-image: url('../img/Icon_contact.svg');
+
+        }
+    }
+}
