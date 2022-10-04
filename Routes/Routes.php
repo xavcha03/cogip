@@ -5,6 +5,7 @@ namespace App\Routes;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\CompaniesController;
+use App\Controllers\DashBoardController;
 
 $router = new Router();
 
@@ -22,6 +23,29 @@ $router->get('/home', function () {
 
 
 //------------- DashBoard
+/**
+ * dashboard Home
+ */
+$router->get('/dashboard', function () {
+    (new DashBoardController)->statistiques();
+});
+
+/**
+ * Formulaire d'ajout d'une entreprise
+ */
+$router->get('/dashboard/addcompany', function () {
+    (new DashBoardController)->callFormCompany();
+});
+
+
+
+
+
+
+
+
+
+
 
 
 //-------------------Company Type
@@ -36,9 +60,9 @@ $router->post('/dashboard/companies/type', function () {
 /**
  * Delete a company Type
  */
-$router->delete('dashboard/companies/type', function(){
+$router->delete('dashboard/companies/type', function () {
     (new CompaniesController)->deleteType();
- });
+});
 
 
 

@@ -1,0 +1,14 @@
+.resume {
+    display: flex;
+
+    gap: 35px;
+
+    &__left {
+        width: 50%;
+    }
+
+    &__right {
+        width: 50%;
+    }
+}
+
