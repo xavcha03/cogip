@@ -1,3 +1,7 @@
+<?php
+require_once(__ROOT__.'/Resources/views/front-end/header.php');
+?>
+
 <main> 
     <div class="container">
         
@@ -153,3 +157,7 @@
             </section>
     </div>
 </main>
+
+<?php
+require_once(__ROOT__.'/Resources/views/front-end/footer.php');
+?>

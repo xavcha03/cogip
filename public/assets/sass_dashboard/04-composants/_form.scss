@@ -1,0 +1,43 @@
+.form {
+    display:flex;
+    flex-direction: column;
+    gap:45px;
+    font: $font-secondary;
+ 
+    &__input,
+    &__select,
+    &__button{
+        height: 60px;
+        background-color: $color-primaryLight;
+        border:none;
+        padding-left:45px;
+    }
+    
+    &__input{
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 24px;
+
+    }
+
+    &__select{
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__button{
+        background-color: $color-primary;
+        color:white;
+        text-align: start;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    
+    // &__input:focus{
+    //     border-color: $color-primaryLight;
+    // }
+
+
+}

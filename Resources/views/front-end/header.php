@@ -20,7 +20,7 @@
         </nav>
         <nav class="login">
         <a href="/Sign up" class="signUp">Sign up</a>
-        <a href="/Login">Login</a>   
+        <a href="/dashboard">Login</a>   
         </nav>
     </header>
     <div class="title">
