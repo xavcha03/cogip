@@ -12,8 +12,5 @@ class DashBoardController extends Controller
     }
 
 
-    public function callFormCompany()
-    {
-        $this->view('dashboard/companies/addform', []);
-    }
+    
 }

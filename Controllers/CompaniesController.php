@@ -7,42 +7,33 @@ use App\Model\CompanyModel;
 
 class CompaniesController extends Controller
 {
+    //Display add companie form
+    public function callFormCompany()
+    {
+        //Get all types in BDD
+        $model = new CompanyModel();
+        $types = $model->getAllType();
+
+        //Display view
+        $this->view('dashboard/companies/addform', ["types" => $types]);
+    }
+
+
     /*
     * Ajouter un type d'entreprise
     */
     public function addType()
     {
-        $type = $_POST['companyType'];
+        //get data from form
+        $type = $_POST['typeCompany'];
 
         $model = new CompanyModel();
-        if ($model->addType($type)) {
-            return $this->view('addTypeOk', ["type" => $type]);
-        } else {
-            return $this->view('addTypeNotOK', ["type" => $type]);
-        }
-    }
-    public function deleteType()
-    {
-        $type=[];
+        $model->addType($type);
         
-        $model = new CompanyModel();
-        if ($model->deleteType($type)) {
-            return $this->view('deleteCompanyOk', ["type" => $type]);
-        } else {
-            return $this->view('deleteCompanyNotOK', ["type" => $type]);
-        }
-    }
-    public function updateType()
-    {
-        $type = $_UPDATE['companyType'];
         
-        $model = new CompanyModel();
-        if ($model->updateCompany($type)) {
-            return $this->view('updateCompanyOk', ["type" => $type]);
-        } else {
-            return $this->view('updateCompanyNotOK', ["type" => $type]);
-        }
     }
+    
+    
     public function addCompany()
     {
         $company=[];
@@ -50,15 +41,25 @@ class CompaniesController extends Controller
         $company['country'] = $_POST['country'];
         $company['tva'] = $_POST['tva'];
         $company['type_id'] = $_POST['type_id'];
-
-
-        $model = new CompanyModel();
-        if ($model->addCompany($company)) {
-            return $this->view('addCompanyOk', ["company" => $company]);
-        } else {
-            return $this->view('addCompanyNotOK', ["company" => $company]);
-        }
     }
+
+    /**
+     * Supprimer un type d'entreprise
+     */
+    public function deleteType($idType)
+    {
+        $model = new CompanyModel();
+        $model->deleteType($idType);
+        header('Location:/dashboard/companies/allType');
+    }
+
+    //Display Form add company
+    public function displayForm(){
+        return $this->view('dashboard/companies/typeForm', []);
+    }
+
+    //Display allType
+    
     public function deleteCompany($companyId)
     {
         $company=[];
@@ -84,5 +85,9 @@ class CompaniesController extends Controller
         } else {
             return $this->view('updateCompanyNotOK', ["company" => $company]);
         }
+        $types = $model->getAllType();
+
+        return $this->view('dashboard/companies/allType', ["types"=>$types]);
     }
+
 }

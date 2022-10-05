@@ -22,16 +22,7 @@ class CompanyModel extends Model
         $isDone = $stm->execute();
         return $isDone;
     }
-    public function deleteType($type)
-    {
-        //Création de la requete
-        $query = "DELETE FROM types where name = 'name'";
-        //Préparation
-        $stm = $this->db->prepare($query);
-        //execution de la requete
-        $isDone = $stm->execute();
-        return $isDone;
-    }
+    
     public function addCompany($company)
     {
         //Création de la requete
@@ -68,14 +59,31 @@ class CompanyModel extends Model
         //execution de la requete
         $isDone = $stm->execute();
         return $isDone;
-
+    }
     /**
      * Delete a type of company with an ID
      */
-    public function deleteType($id){
+    public function deleteType($idType){
         $query = "DELETE FROM types WHERE id = :idType";
         $stm = $this->db->prepare($query);
-        $stm->bindParam("idType", $id);
-        $stm->execute;
+        $stm->bindParam(":idType", $idType);
+        $stm->execute();
     }
+
+
+    /**
+     * Display all type
+     */
+    public function getAllType(){
+        $query = "SELECT * FROM types";
+        $stm = $this->db->prepare($query);
+        $stm->execute();
+
+        $result = $stm->fetchAll();
+        return $result;
+    }
+
+
+
+
 }
