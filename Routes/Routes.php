@@ -57,11 +57,6 @@ $router->get('/dashboard/addcompany', function () {
 $router->post('/dashboard/companies/type', function () {
     (new CompaniesController)->addType();
 });
-
-/**
- * Delete a company Type
- */
-$router->get('dashboard/companies/deleteType/(\d+)', function ($idType) {
     
     (new CompaniesController)->deleteType($idType);
 });
