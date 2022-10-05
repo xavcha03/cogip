@@ -57,7 +57,12 @@ $router->get('/dashboard/addcompany', function () {
 $router->post('/dashboard/companies/type', function () {
     (new CompaniesController)->addType();
 });
-    
+
+/**
+ * Delete a company Type
+ */
+$router->get('dashboard/companies/deleteType/(\d+)', function ($idType) {
+
     (new CompaniesController)->deleteType($idType);
 });
 //display Company type form
@@ -65,7 +70,7 @@ $router->get('/dashboard/companies/type', function () {
     (new CompaniesController)->displayForm();
 });
 //display Company all Type
-$router->get('/dashboard/companies/allType', function(){
+$router->get('/dashboard/companies/allType', function () {
     (new CompaniesController)->displayType();
 });
 $router->post('/dashboard/companies', function () {
