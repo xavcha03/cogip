@@ -73,14 +73,5 @@ $router->get('/dashboard/companies/type', function () {
 $router->get('/dashboard/companies/allType', function(){
     (new CompaniesController)->displayType();
 });
-$router->post('/dashboard/companies', function () {
-    (new CompaniesController)->addCompany();
-});
-$router->get('/dashboard/companies/(\d+)', function ($companyId) {
-    (new CompaniesController)->deleteCompany($companyId);
-});
-$router->get('/dashboard/companies', function () {
-    (new CompaniesController)->updateCompany();
-});
 
 $router->run();

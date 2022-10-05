@@ -59,7 +59,14 @@ class CompaniesController extends Controller
     }
 
     //Display allType
-    
+    public function displayType(){
+        $model = new CompanyModel();
+        if ($model->addCompany($company)) {
+            return $this->view('addCompanyOk', ["company" => $company]);
+        } else {
+            return $this->view('addCompanyNotOK', ["company" => $company]);
+        }
+    }
     public function deleteCompany($companyId)
     {
         $company=[];
