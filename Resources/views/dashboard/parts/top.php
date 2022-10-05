@@ -30,8 +30,8 @@
             </nav>
             <!-- section logout-->
             <section class="logout">
-                <img class="logout__avatar" src="/assets/img/avatar.png" alt="">
-                <a class="logout__link" href="#">Logout</a>
+                <img class="logout__avatar" src="assets/img/avatar.png" alt="">
+                <a class="logout__link" href="/">Logout</a>
             </section>
         </aside>
         <!-- zone de contenu-->
