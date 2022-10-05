@@ -18,6 +18,7 @@ $router->get('/home', function () {
     (new HomeController)->test();
 });
 
+
 //
 
 
@@ -34,7 +35,7 @@ $router->get('/dashboard', function () {
  * Formulaire d'ajout d'une entreprise
  */
 $router->get('/dashboard/addcompany', function () {
-    (new DashBoardController)->callFormCompany();
+    (new CompaniesController)->callFormCompany();
 });
 
 
@@ -60,15 +61,17 @@ $router->post('/dashboard/companies/type', function () {
 /**
  * Delete a company Type
  */
-$router->delete('dashboard/companies/type', function () {
-    (new CompaniesController)->deleteType();
+$router->get('dashboard/companies/deleteType/(\d+)', function ($idType) {
+    
+    (new CompaniesController)->deleteType($idType);
 });
-
-
-
-
-$router->get('/updateProject', function () {
-    (new CompaniesController)->addType();
+//display Company type form
+$router->get('/dashboard/companies/type', function () {
+    (new CompaniesController)->displayForm();
+});
+//display Company all Type
+$router->get('/dashboard/companies/allType', function(){
+    (new CompaniesController)->displayType();
 });
 
 $router->run();

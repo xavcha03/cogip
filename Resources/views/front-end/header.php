@@ -11,12 +11,12 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
         <h2>COGIP</h2>
-        <a href="/home" class="button">Home</a>
-        <a href="/invoices">Invoices</a>
-        <a href="/companies">Companies</a>
-        <a href="/contact">Contacts</a>
+        <nav class="nav">
+            <a href="/home" class="button">Home</a>
+            <a href="/invoices">Invoices</a>
+            <a href="/companies">Companies</a>
+            <a href="/contact">Contacts</a>
         </nav>
         <nav class="login">
         <a href="/Sign up" class="signUp">Sign up</a>

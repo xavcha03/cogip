@@ -7,29 +7,53 @@ use App\Model\CompanyModel;
 
 class CompaniesController extends Controller
 {
+    //Display add companie form
+    public function callFormCompany()
+    {
+        //Get all types in BDD
+        $model = new CompanyModel();
+        $types = $model->getAllType();
+
+        //Display view
+        $this->view('dashboard/companies/addform', ["types" => $types]);
+    }
+
+
     /*
     * Ajouter un type d'entreprise
     */
     public function addType()
     {
-        $type = $_POST['companyType'];
+        //get data from form
+        $type = $_POST['typeCompany'];
 
         $model = new CompanyModel();
-        if ($model->addType($type)) {
-            return $this->view('addTypeOk', ["type" => $type]);
-        } else {
-            return $this->view('addTypeNotOK', ["type" => $type]);
-        }
+        $model->addType($type);
+        
+        
     }
 
     /**
      * Supprimer un type d'entreprise
      */
-    public function deleteType()
+    public function deleteType($idType)
     {
-        $typeId = $_GET['typeID'];
-
         $model = new CompanyModel();
-        $model->deleteType($typeId);
+        $model->deleteType($idType);
+        header('Location:/dashboard/companies/allType');
     }
+
+    //Display Form add company
+    public function displayForm(){
+        return $this->view('dashboard/companies/typeForm', []);
+    }
+
+    //Display allType
+    public function displayType(){
+        $model = new CompanyModel();
+        $types = $model->getAllType();
+
+        return $this->view('dashboard/companies/allType', ["types"=>$types]);
+    }
+
 }
