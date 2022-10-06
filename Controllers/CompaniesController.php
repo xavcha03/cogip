@@ -32,16 +32,6 @@ class CompaniesController extends Controller
         
         
     }
-    
-    
-    public function addCompany()
-    {
-        $company=[];
-        $company['name'] = $_POST['name'];
-        $company['country'] = $_POST['country'];
-        $company['tva'] = $_POST['tva'];
-        $company['type_id'] = $_POST['type_id'];
-    }
 
     /**
      * Supprimer un type d'entreprise
@@ -61,30 +51,46 @@ class CompaniesController extends Controller
     //Display allType
     public function displayType(){
         $model = new CompanyModel();
-        if ($model->addCompany($company)) {
-            return $this->view('addCompanyOk', ["company" => $company]);
-        } else {
-            return $this->view('addCompanyNotOK', ["company" => $company]);
-        }
+        $types = $model->getAllType();
+
+        return $this->view('dashboard/companies/allType', ["types"=>$types]);
+    }
+
+    public function addCompany()
+    {
+        $company=[];
+        $company['name'] = $_POST['name'];
+        $company['country'] = $_POST['country'];
+        $company['tva'] = $_POST['tva'];
+        $company['type_id'] = $_POST['type_id'];
+
+
+        $model = new CompanyModel();
+
+        $model->addCompany($company);
+        header('Location:/dashboard/addcompany');
+        
     }
     public function deleteCompany($companyId)
     {
-        $company=[];
+        
         
         $model = new CompanyModel();
-        if ($model->deleteCompany($company)) {
-            return $this->view('deleteCompanyOk', ["company" => $company]);
-        } else {
-            return $this->view('deleteCompanyNotOK', ["company" => $company]);
-        }
+        $model->deleteCompany($companyId);
+        header('Location:/dashboard/companies/list');
+        
     }
+
+
+
+
     public function updateCompany()
     {
         $company=[];
-        $company['name'] = $_UPDATE['name'];
-        $company['country'] = $_UPDATE['country'];
-        $company['tva'] = $_UPDATE['tva'];
-        $company['type_id'] = $_UPDATE['type_id'];
+        $company['name'] = $_POST['name'];
+        $company['country'] = $_POST['country'];
+        $company['tva'] = $_POST['tva'];
+        $company['type_id'] = $_POST['type_id'];
         
         $model = new CompanyModel();
         if ($model->updateCompany($company)) {
@@ -92,9 +98,13 @@ class CompaniesController extends Controller
         } else {
             return $this->view('updateCompanyNotOK', ["company" => $company]);
         }
-        $types = $model->getAllType();
+    }
+    public function displayCompanies()
+    {
+        $model = new CompanyModel();
+        $companies = $model->getAllCompanies();
 
-        return $this->view('dashboard/companies/allType', ["types"=>$types]);
+        return $this->view('dashboard/companies/allCompanies', ["companies"=>$companies]);
     }
 
 }

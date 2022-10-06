@@ -11,6 +11,10 @@ class ComposerStaticInit42133d2fc147ddab58b993dd24af42b9
         array (
             'Whoops\\' => 7,
         ),
+        'S' => 
+        array (
+            'Symfony\\Component\\Dotenv\\' => 25,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -25,6 +29,10 @@ class ComposerStaticInit42133d2fc147ddab58b993dd24af42b9
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Symfony\\Component\\Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dotenv',
         ),
         'Psr\\Log\\' => 
         array (
@@ -46,12 +54,17 @@ class ComposerStaticInit42133d2fc147ddab58b993dd24af42b9
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit42133d2fc147ddab58b993dd24af42b9::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit42133d2fc147ddab58b993dd24af42b9::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit42133d2fc147ddab58b993dd24af42b9::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit42133d2fc147ddab58b993dd24af42b9::$classMap;
 
         }, null, ClassLoader::class);
     }

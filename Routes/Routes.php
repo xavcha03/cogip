@@ -5,6 +5,7 @@ namespace App\Routes;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\CompaniesController;
+use App\Controllers\ConfigController;
 use App\Controllers\DashBoardController;
 
 $router = new Router();
@@ -62,7 +63,7 @@ $router->post('/dashboard/companies/type', function () {
  * Delete a company Type
  */
 $router->get('dashboard/companies/deleteType/(\d+)', function ($idType) {
-    
+
     (new CompaniesController)->deleteType($idType);
 });
 //display Company type form
@@ -70,8 +71,26 @@ $router->get('/dashboard/companies/type', function () {
     (new CompaniesController)->displayForm();
 });
 //display Company all Type
-$router->get('/dashboard/companies/allType', function(){
+$router->get('/dashboard/companies/allType', function () {
     (new CompaniesController)->displayType();
+});
+$router->get('/dashboard/companies/list', function () {
+    (new CompaniesController)->displayCompanies();
+});
+//
+$router->post('/dashboard/companies/postCompanies', function () {
+    (new CompaniesController)->addCompany();
+});
+$router->get('/dashboard/companies/delete/(\d+)', function ($companyId) {
+    (new CompaniesController)->deleteCompany($companyId);
+});
+$router->get('/dashboard/companies', function () {
+    (new CompaniesController)->updateCompany();
+});
+
+//-------------------- CONFIG
+$router->get('/install', function () {
+    (new ConfigController)->install();
 });
 
 $router->run();

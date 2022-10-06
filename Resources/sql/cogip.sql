@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : mar. 20 sep. 2022 à 07:41
--- Version du serveur : 5.7.36
--- Version de PHP : 7.4.26
+-- Hôte : localhost
+-- Généré le : mer. 05 oct. 2022 à 23:22
+-- Version du serveur : 8.0.30-0ubuntu0.20.04.2
+-- Version de PHP : 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,18 +27,15 @@ SET time_zone = "+00:00";
 -- Structure de la table `companies`
 --
 
-DROP TABLE IF EXISTS `companies`;
-CREATE TABLE IF NOT EXISTS `companies` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `companies` (
+  `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
-  `type_id` int(3) NOT NULL,
+  `type_id` int NOT NULL,
   `country` varchar(50) NOT NULL,
   `tva` varchar(50) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `type_id` (`type_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -46,18 +43,15 @@ CREATE TABLE IF NOT EXISTS `companies` (
 -- Structure de la table `contact`
 --
 
-DROP TABLE IF EXISTS `contact`;
-CREATE TABLE IF NOT EXISTS `contact` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `contact` (
+  `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
-  `company_id` int(3) NOT NULL,
+  `company_id` int NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(50) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `company_id` (`company_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -65,16 +59,13 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- Structure de la table `invoices`
 --
 
-DROP TABLE IF EXISTS `invoices`;
-CREATE TABLE IF NOT EXISTS `invoices` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `invoices` (
+  `id` int NOT NULL,
   `ref` varchar(50) NOT NULL,
-  `id_company` int(3) NOT NULL,
+  `id_company` int NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_company` (`id_company`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -82,14 +73,12 @@ CREATE TABLE IF NOT EXISTS `invoices` (
 -- Structure de la table `permissions`
 --
 
-DROP TABLE IF EXISTS `permissions`;
-CREATE TABLE IF NOT EXISTS `permissions` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `permissions` (
+  `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -97,14 +86,12 @@ CREATE TABLE IF NOT EXISTS `permissions` (
 -- Structure de la table `roles`
 --
 
-DROP TABLE IF EXISTS `roles`;
-CREATE TABLE IF NOT EXISTS `roles` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `roles` (
+  `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -112,15 +99,11 @@ CREATE TABLE IF NOT EXISTS `roles` (
 -- Structure de la table `roles_permission`
 --
 
-DROP TABLE IF EXISTS `roles_permission`;
-CREATE TABLE IF NOT EXISTS `roles_permission` (
-  `id` int(3) NOT NULL,
-  `permission_id` int(3) NOT NULL,
-  `role_id` int(3) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `permission_id` (`permission_id`),
-  KEY `role_id` (`role_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `roles_permission` (
+  `id` int NOT NULL,
+  `permission_id` int NOT NULL,
+  `role_id` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -128,14 +111,12 @@ CREATE TABLE IF NOT EXISTS `roles_permission` (
 -- Structure de la table `types`
 --
 
-DROP TABLE IF EXISTS `types`;
-CREATE TABLE IF NOT EXISTS `types` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `types` (
+  `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -143,19 +124,126 @@ CREATE TABLE IF NOT EXISTS `types` (
 -- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(3) NOT NULL,
+CREATE TABLE `users` (
+  `id` int NOT NULL,
   `first_name` varchar(50) NOT NULL,
-  `role_id` int(3) NOT NULL,
+  `role_id` int NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `role_id` (`role_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `companies`
+--
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `type_id` (`type_id`);
+
+--
+-- Index pour la table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `company_id` (`company_id`);
+
+--
+-- Index pour la table `invoices`
+--
+ALTER TABLE `invoices`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_company` (`id_company`);
+
+--
+-- Index pour la table `permissions`
+--
+ALTER TABLE `permissions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `roles_permission`
+--
+ALTER TABLE `roles_permission`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `permission_id` (`permission_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Index pour la table `types`
+--
+ALTER TABLE `types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `companies`
+--
+ALTER TABLE `companies`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `invoices`
+--
+ALTER TABLE `invoices`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `permissions`
+--
+ALTER TABLE `permissions`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `roles_permission`
+--
+ALTER TABLE `roles_permission`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `types`
+--
+ALTER TABLE `types`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
