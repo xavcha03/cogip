@@ -56,4 +56,14 @@ class CompaniesController extends Controller
         return $this->view('dashboard/companies/allType', ["types"=>$types]);
     }
 
+/**
+ * add company
+*/
+    // public function addCompany(){
+    //     $model = new CompanyModel();
+    //     $types = $model->getAllType();
+
+    //     return $this->view('dashboard/companies/addform', ["types"=>$types]);
+    // }
+
 }

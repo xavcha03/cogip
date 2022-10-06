@@ -39,16 +39,6 @@ $router->get('/dashboard/addcompany', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
 //-------------------Company Type
 
 /**
