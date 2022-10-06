@@ -7,6 +7,7 @@ use App\Controllers\HomeController;
 use App\Controllers\CompaniesController;
 use App\Controllers\ConfigController;
 use App\Controllers\DashBoardController;
+use App\Controllers\InvoicesController;
 
 $router = new Router();
 
@@ -40,7 +41,10 @@ $router->get('/dashboard/addcompany', function () {
 });
 
 
-
+// Add form invoices
+$router->get('/dashboard/invoice', function () {
+    (new CompaniesController)->callFormInvoices();
+});
 
 
 
@@ -86,6 +90,10 @@ $router->get('/dashboard/companies/delete/(\d+)', function ($companyId) {
 });
 $router->get('/dashboard/companies', function () {
     (new CompaniesController)->updateCompany();
+});
+// add invoices
+$router->post('/dashboard/invoice/addInvoices', function () {
+    (new CompaniesController)->addInvoices();
 });
 
 //-------------------- CONFIG
