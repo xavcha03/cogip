@@ -1,0 +1,77 @@
+.container{
+    padding: 10px 10px;
+}
+
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 79px;
+    background-color: $color-primary;
+}
+
+
+table{
+    width: 1193px;
+    margin-left: 120px;
+    position: relative;
+    // .project{
+    //     width:300px;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 0;// ancorare le immagini  project e lamp alla sezione table---verificare il rettangolo 
+    // }
+}
+
+tr{
+    background-color: $color-primary;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 55px;
+}
+
+
+th{
+background-color: $color-primary;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 55px;
+text-align: left;
+}
+
+
+h2{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 900;
+font-size: 60px;
+line-height: 73px;
+margin-left: 120px;
+margin-bottom:30px;
+}
+
+// h3{
+//     width: 580px;
+//     padding:120px;
+//     margin-left: 100px;
+// }
+
+.row tr:nth-child(even){
+    background-color:$color-grey;
+}
+.row tr:nth-child(odd){
+    background-color:$color_white;
+}
+
+
+
+

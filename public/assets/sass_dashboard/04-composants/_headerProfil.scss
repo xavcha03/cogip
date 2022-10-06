@@ -1,0 +1,18 @@
+.profil {
+    display: flex;
+    flex-direction: column;
+    padding: 54px 88px;
+    gap: 21px;
+    border-bottom: 1px solid $color-grey;
+
+    &__avatar {
+        width: 105px;
+    }
+
+    &__name {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 29px;
+    }
+}
