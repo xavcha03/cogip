@@ -11,6 +11,10 @@ class ComposerStaticInit42133d2fc147ddab58b993dd24af42b9
         array (
             'Whoops\\' => 7,
         ),
+        'S' => 
+        array (
+            'Symfony\\Component\\Dotenv\\' => 25,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -25,6 +29,10 @@ class ComposerStaticInit42133d2fc147ddab58b993dd24af42b9
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Symfony\\Component\\Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dotenv',
         ),
         'Psr\\Log\\' => 
         array (

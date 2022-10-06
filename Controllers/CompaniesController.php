@@ -56,14 +56,55 @@ class CompaniesController extends Controller
         return $this->view('dashboard/companies/allType', ["types"=>$types]);
     }
 
-/**
- * add company
-*/
-    // public function addCompany(){
-    //     $model = new CompanyModel();
-    //     $types = $model->getAllType();
+    public function addCompany()
+    {
+        $company=[];
+        $company['name'] = $_POST['name'];
+        $company['country'] = $_POST['country'];
+        $company['tva'] = $_POST['tva'];
+        $company['type_id'] = $_POST['type_id'];
 
-    //     return $this->view('dashboard/companies/addform', ["types"=>$types]);
-    // }
+
+        $model = new CompanyModel();
+
+        $model->addCompany($company);
+        header('Location:/dashboard/addcompany');
+        
+    }
+    public function deleteCompany($companyId)
+    {
+        
+        
+        $model = new CompanyModel();
+        $model->deleteCompany($companyId);
+        header('Location:/dashboard/companies/list');
+        
+    }
+
+
+
+
+    public function updateCompany()
+    {
+        $company=[];
+        $company['name'] = $_POST['name'];
+        $company['country'] = $_POST['country'];
+        $company['tva'] = $_POST['tva'];
+        $company['type_id'] = $_POST['type_id'];
+        
+        $model = new CompanyModel();
+        if ($model->updateCompany($company)) {
+            return $this->view('updateCompanyOk', ["company" => $company]);
+        } else {
+            return $this->view('updateCompanyNotOK', ["company" => $company]);
+        }
+    }
+    public function displayCompanies()
+    {
+        $model = new CompanyModel();
+        $companies = $model->getAllCompanies();
+
+        return $this->view('dashboard/companies/allCompanies', ["companies"=>$companies]);
+    }
 
 }
