@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Model\CompanyModel;
+use App\Model\ContactModel;
 
 class ContactController extends Controller
 {
@@ -18,9 +19,18 @@ class ContactController extends Controller
 
 }
 
+
 public function addContact(){
     $contact = [];
-    $contact["name"] = 
+    $contact["name"] = $_POST["name"];
+    $contact["company_id"] = $_POST["company_id"];
+    $contact["email"] = $_POST["email"];
+    $contact["phone"] = $_POST["phone"];
+
+    $model = new ContactModel();
+    $model->addContact($contact);
+
+    
 }
 
 
