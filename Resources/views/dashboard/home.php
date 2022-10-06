@@ -8,15 +8,15 @@ require_once(__ROOT__ . '/Resources/views/dashBoard/parts/top.php');
             <h3 class="contentSection__title">Statistics</h3>
             <ul class="statBadges">
                 <li class="statBadges__item statBadges__item--bgDark">
-                    <span class="statBadges__item__num">245</span>
+                    <span class="statBadges__item__num"><?= $datas['invoiceCount'] ?></span>
                     <span class="statBadges__item__descr">Invoices</span>
                 </li>
                 <li class="statBadges__item statBadges__item--bglight">
-                    <span class="statBadges__item__num">245</span>
+                    <span class="statBadges__item__num"><?= $datas['contactCount'] ?></span>
                     <span class="statBadges__item__descr">Contacts</span>
                 </li>
                 <li class="statBadges__item statBadges__item--bglightRed">
-                    <span class="statBadges__item__num">245</span>
+                    <span class="statBadges__item__num"><?= $datas['companiesCount'] ?></span>
                     <span class="statBadges__item__descr">Companies</span>
                 </li>
             </ul>
@@ -34,26 +34,18 @@ require_once(__ROOT__ . '/Resources/views/dashBoard/parts/top.php');
                     </tr>
                 </thead>
                 <tbody class="resumeTable__body">
-                    <tr>
-                        <td>Henry Bailleux</td>
-                        <td>0485 78 76 67</td>
-                        <td>henry.bailleux@gr.be</td>
-                    </tr>
-                    <tr>
-                        <td>Henry Bailleux</td>
-                        <td>0485 78 76 67</td>
-                        <td>henry.bailleux@gr.be</td>
-                    </tr>
-                    <tr>
-                        <td>Henry Bailleux</td>
-                        <td>0485 78 76 67</td>
-                        <td>henry.bailleux@gr.be</td>
-                    </tr>
-                    <tr>
-                        <td>Henry Bailleux</td>
-                        <td>0485 78 76 67</td>
-                        <td>henry.bailleux@gr.be</td>
-                    </tr>
+                    <?php
+                    foreach ($datas['lastContacts'] as $contact) {
+                    ?>
+                        <tr>
+                            <td><?= $contact['name'] ?></td>
+                            <td><?= $contact['phone'] ?></td>
+                            <td><?= $contact['email'] ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+
                 </tbody>
             </table>
         </section>
@@ -72,26 +64,18 @@ require_once(__ROOT__ . '/Resources/views/dashBoard/parts/top.php');
                     </tr>
                 </thead>
                 <tbody class="resumeTable__body">
-                    <tr>
-                        <td>FF20220815-001</td>
-                        <td>15/09/22</td>
-                        <td>Jouet Jean-Michel</td>
-                    </tr>
-                    <tr>
-                        <td>FF20220815-001</td>
-                        <td>15/09/22</td>
-                        <td>Jouet Jean-Michel</td>
-                    </tr>
-                    <tr>
-                        <td>FF20220815-001</td>
-                        <td>15/09/22</td>
-                        <td>Jouet Jean-Michel</td>
-                    </tr>
-                    <tr>
-                        <td>FF20220815-001</td>
-                        <td>15/09/22</td>
-                        <td>Jouet Jean-Michel</td>
-                    </tr>
+                    <?php
+                    foreach ($datas['lastInvoices'] as $invoice) {
+                    ?>
+                        <tr>
+                            <td><?= $invoice['ref'] ?></td>
+                            <td><?= $invoice['created_at'] ?></td>
+                            <td><?= $invoice['companyName'] ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+
                 </tbody>
             </table>
         </section>
@@ -107,26 +91,19 @@ require_once(__ROOT__ . '/Resources/views/dashBoard/parts/top.php');
                     </tr>
                 </thead>
                 <tbody class="resumeTable__body">
-                    <tr>
-                        <td>Jouet Jean-Michel</td>
-                        <td>FR873 736 367</td>
-                        <td>FRANCE</td>
-                    </tr>
-                    <tr>
-                        <td>Jouet Jean-Michel</td>
-                        <td>FR873 736 367</td>
-                        <td>FRANCE</td>
-                    </tr>
-                    <tr>
-                        <td>Jouet Jean-Michel</td>
-                        <td>FR873 736 367</td>
-                        <td>FRANCE</td>
-                    </tr>
-                    <tr>
-                        <td>Jouet Jean-Michel</td>
-                        <td>FR873 736 367</td>
-                        <td>FRANCE</td>
-                    </tr>
+                    <?php
+                    foreach ($datas['lastCompanies'] as $company) {
+                    ?>
+                        <tr>
+                            <td><?= $company['name'] ?></td>
+                            <td><?= $company['tva'] ?></td>
+                            <td><?= $company['country'] ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+
+
                 </tbody>
             </table>
         </section>

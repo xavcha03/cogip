@@ -8,6 +8,7 @@ use App\Controllers\CompaniesController;
 use App\Controllers\ConfigController;
 use App\Controllers\ContactController;
 use App\Controllers\DashBoardController;
+use App\Controllers\InvoiceController;
 
 $router = new Router();
 
@@ -93,5 +94,28 @@ $router->get('/dashboard/contact', function () {
 $router->post('/dashboard/contact', function () {
     (new ContactController)->addContact();
 });
+
+$router->get('/dashboard/contact/list', function () {
+    (new ContactController)->list();
+});
+$router->get('/dashboard/contact/delete/(\d+)', function ($contactId) {
+    (new ContactController)->delete($contactId);
+});
+
+
+//------------------INVOICES
+$router->get('/dashboard/invoice', function () {
+    (new InvoiceController)->displayForm();
+});
+$router->post('/dashboard/invoice', function () {
+    (new InvoiceController)->addInvoice();
+});
+$router->get('/dashboard/invoice/list', function () {
+    (new InvoiceController)->list();
+});
+$router->get('/dashboard/invoice/delete/(\d+)', function ($invoiceId) {
+    (new InvoiceController)->delete($invoiceId);
+});
+
 
 $router->run();

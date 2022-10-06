@@ -16,25 +16,34 @@ class ContactController extends Controller
         $model = new CompanyModel();
         $companies = $model->getAllCompanies();
         $this->view('dashboard/contact/addform', ["companies" => $companies]);
-
-}
-
-
-public function addContact(){
-    $contact = [];
-    $contact["name"] = $_POST["name"];
-    $contact["company_id"] = $_POST["company_id"];
-    $contact["email"] = $_POST["email"];
-    $contact["phone"] = $_POST["phone"];
-
-    $model = new ContactModel();
-    $model->addContact($contact);
-
-    
-}
+    }
 
 
+    public function addContact()
+    {
+        $contact = [];
+        $contact["name"] = $_POST["name"];
+        $contact["company_id"] = $_POST["company_id"];
+        $contact["email"] = $_POST["email"];
+        $contact["phone"] = $_POST["phone"];
 
+        $model = new ContactModel();
+        $model->addContact($contact);
 
+        header("Location:/dashboard/contact");
+    }
 
+    public function list()
+    {
+        $model = new ContactModel();
+        $contacts = $model->listContact();
+        $this->view('dashboard/contact/listContact', ['contacts' => $contacts]);
+    }
+
+    public function delete($contactId)
+    {
+        $model = new ContactModel();
+        $model->deleteContact($contactId);
+        header('location:/dashboard/contact/list');
+    }
 }

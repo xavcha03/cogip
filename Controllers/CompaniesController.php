@@ -29,8 +29,7 @@ class CompaniesController extends Controller
 
         $model = new CompanyModel();
         $model->addType($type);
-        
-        
+        header('Location:/dashboard/companies/allType');
     }
 
     /**
@@ -44,21 +43,23 @@ class CompaniesController extends Controller
     }
 
     //Display Form add company
-    public function displayForm(){
+    public function displayForm()
+    {
         return $this->view('dashboard/companies/typeForm', []);
     }
 
     //Display allType
-    public function displayType(){
+    public function displayType()
+    {
         $model = new CompanyModel();
         $types = $model->getAllType();
 
-        return $this->view('dashboard/companies/allType', ["types"=>$types]);
+        return $this->view('dashboard/companies/allType', ["types" => $types]);
     }
 
     public function addCompany()
     {
-        $company=[];
+        $company = [];
         $company['name'] = $_POST['name'];
         $company['country'] = $_POST['country'];
         $company['tva'] = $_POST['tva'];
@@ -68,17 +69,15 @@ class CompaniesController extends Controller
         $model = new CompanyModel();
 
         $model->addCompany($company);
-        header('Location:/dashboard/addcompany');
-        
+        header('Location:/dashboard/companies/list');
     }
     public function deleteCompany($companyId)
     {
-        
-        
+
+
         $model = new CompanyModel();
         $model->deleteCompany($companyId);
         header('Location:/dashboard/companies/list');
-        
     }
 
 
@@ -86,12 +85,12 @@ class CompaniesController extends Controller
 
     public function updateCompany()
     {
-        $company=[];
+        $company = [];
         $company['name'] = $_POST['name'];
         $company['country'] = $_POST['country'];
         $company['tva'] = $_POST['tva'];
         $company['type_id'] = $_POST['type_id'];
-        
+
         $model = new CompanyModel();
         if ($model->updateCompany($company)) {
             return $this->view('updateCompanyOk', ["company" => $company]);
@@ -104,7 +103,6 @@ class CompaniesController extends Controller
         $model = new CompanyModel();
         $companies = $model->getAllCompanies();
 
-        return $this->view('dashboard/companies/allCompanies', ["companies"=>$companies]);
+        return $this->view('dashboard/companies/allCompanies', ["companies" => $companies]);
     }
-
 }
