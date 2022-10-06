@@ -111,6 +111,8 @@ class CompanyModel extends Model
     }
 
 
-
+    public function getAllCotact(){
+        
+    }
 
 }

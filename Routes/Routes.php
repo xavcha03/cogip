@@ -6,6 +6,7 @@ use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\CompaniesController;
 use App\Controllers\ConfigController;
+use App\Controllers\ContactController;
 use App\Controllers\DashBoardController;
 
 $router = new Router();
@@ -81,6 +82,16 @@ $router->get('/dashboard/companies', function () {
 //-------------------- CONFIG
 $router->get('/install', function () {
     (new ConfigController)->install();
+});
+
+//---------------------CONTACT
+
+$router->get('/dashboard/contact', function () {
+    (new ContactController)->addForm();
+});
+
+$router->post('/dashboard/contact', function () {
+    (new ContactController)->addContact();
 });
 
 $router->run();

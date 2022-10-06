@@ -16,6 +16,12 @@
   line-height: 23px;
 }
 
+.title {
+  background-image: url("../img/rectangle.png");
+  background-repeat: no-repeat;
+  background-position: bottom 0 center;
+}
+
 .login {
   display: flex;
   justify-content: end;
@@ -47,9 +53,8 @@
   background-color: #FFFFFF;
 }
 
-h3 {
-  width: 590px;
-  height: 210px;
+.manager {
+  width: 100px;
   padding: 130px;
   margin-left: 100px;
   font-family: "Inter";
@@ -59,18 +64,9 @@ h3 {
 }
 
 .img_Pmanager {
-  position: absolute;
-  width: 779px;
-  height: 586px;
+  width: 800px;
   left: 681px;
   top: 142px;
-}
-
-.img_rectangle {
-  width: 1200px;
-  height: 112px;
-  margin-top: 605px;
-  line-height: 79px;
 }
 
 .container {
