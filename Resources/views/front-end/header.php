@@ -23,7 +23,7 @@
         <a href="/dashboard">Login</a>   
         </nav>
     </header>
-    <div class="title">
+    <div class="section">
             <h3 class="manager">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h3>
             <img class="img_Pmanager" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
             <!-- <img class="img_rectangle" src="/assets/img/Rectangle 10.png"> -->
