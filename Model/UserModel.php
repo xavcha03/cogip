@@ -8,17 +8,15 @@ class UserModel extends Model
 {
     public function getAllUsers(){
         $query = 
-        "SELECT users.id AS id, 
-        users.first_name AS first_name,
-        last_name,
-        email,
-        password,
-        users.created_at AS created_at,
-        users.updated_at AS updated_at,
-        roles.name AS users 
+        "SELECT users.*,
+        
+        roles.id AS roleId,
+        roles.name AS roleName,
+        roles.created_at AS roleCreate,
+        roles.updated_at AS roleUpdate
         FROM users
         LEFT JOIN roles
-        ON users.role_id = roles.id 
+        ON users.role_id = roles.name
         ";
         $stm = $this->db->prepare($query);
         $stm->execute();
@@ -29,18 +27,17 @@ class UserModel extends Model
 
     public function addUser($user)
     {
-        $query = "INSERT INTO users (first_name, role_id , last_name, email, password, created_at, updated_at)
-        VALUES (:first_name, :role_id , :last_name, :email, password, NOW(), NOW())";
+        $query = "INSERT INTO users (first_name, role_id , last_name, email, password, created_at, updated_at) VALUES (:first_name, :role_id , :last_name, :email, :password, NOW(), NOW())";
         $stm = $this->db->prepare($query);
         $stm->bindParam(':first_name', $user["first_name"]);
+        $stm->bindParam(':role_id', $user["role_id"]);
         $stm->bindParam(':last_name', $user["last_name"]);
         $stm->bindParam(':email', $user["email"]);
         $stm->bindParam(':password', $user["password"]);
-        $stm->bindParam(':role_id ', $user["role_id "]);
 
         $stm->execute();
 
-        header("Location:/dashboard/signup");
+        header("Location:/dashboard/admin");
     }
 
     public function listUser()
@@ -64,7 +61,7 @@ class UserModel extends Model
         $stm = $this->db->prepare($query);
         $stm->bindParam(":id", $userID);
         $stm->execute();
-        header("Location:/dashboard/signup");
+        header("Location:/dashboard/admin");
     }
 
     public function countUsers()

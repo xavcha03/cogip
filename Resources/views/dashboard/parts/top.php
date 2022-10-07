@@ -26,6 +26,7 @@
                     <li class="nav__linksList__item"><a class="nav__link nav__link--invoices" href="/dashboard/invoice">Invoices</a></li>
                     <li class="nav__linksList__item"><a class="nav__link nav__link--companies" href="/dashboard/addcompany">Companies</a></li>
                     <li class="nav__linksList__item"><a class="nav__link nav__link--contact" href="/dashboard/contact">Contact</a></li>
+                    <li class="nav__linksList__item"><a class="nav__link nav__link--admin" href="/dashboard/admin">Admin</a></li>
                 </ul>
             </nav>
             <!-- section logout-->

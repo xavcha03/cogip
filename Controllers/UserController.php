@@ -10,12 +10,13 @@ class UserController extends Controller
 {
 
     //Display add user
-    public function addFormSignUp()
+    public function callFormUser()
     {
         //Get all contact in BDD
         $model = new UserModel();
         $users = $model->getAllUsers();
-        $this->view('dashboard/signup/addform', ["users" => $users]);
+        
+        $this->view('dashboard/admin/addFormUser', ["users" => $users]);
     }
 
 
@@ -23,28 +24,29 @@ class UserController extends Controller
     {
         $user = [];
         $user["first_name"] = $_POST["first_name"];
-        $user["role_id "] = $_POST["role_id "];
+        $user["role_id"] = $_POST["role_id"];
         $user["last_name"] = $_POST["last_name"];
         $user["email"] = $_POST["email"];
         $user["password"] = $_POST["password"];
+        dd($user);
 
         $model = new UserModel();
         $model->addUser($user);
 
-        header("Location:/dashboard/signup");
+        header("Location:/dashboard/admin");
     }
 
     public function listUser()
     {
         $model = new UserModel();
         $users = $model->listUser();
-        $this->view('dashboard/signup/listusers', ['users' => $users]);
+        $this->view('dashboard/admin/listusers', ['users' => $users]);
     }
 
     public function deleteUser($userID)
     {
         $model = new UserModel();
         $model->deleteUser($userID);
-        header('location:/dashboard/signup/list');
+        header('location:/dashboard/admin/list');
     }
 }

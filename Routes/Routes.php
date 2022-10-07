@@ -9,6 +9,7 @@ use App\Controllers\ConfigController;
 use App\Controllers\ContactController;
 use App\Controllers\DashboardController;
 use App\Controllers\InvoiceController;
+use App\Controllers\UserController;
 
 $router = new Router();
 
@@ -115,6 +116,22 @@ $router->get('/dashboard/invoice/list', function () {
 });
 $router->get('/dashboard/invoice/delete/(\d+)', function ($invoiceId) {
     (new InvoiceController)->delete($invoiceId);
+});
+
+// Add form user
+$router->get('/dashboard/admin', function () {
+    (new UserController)->callFormUser();
+});
+
+//------------------USERS
+$router->post('/dashboard/admin/user', function () {
+    (new UserController)->addUser();
+});
+$router->get('/dashboard/admin/listUsers', function () {
+    (new UserController)->listUser();
+});
+$router->get('/dashboard/admin/delete/(\d+)', function ($userID) {
+    (new UserController)->deleteUser($userID);
 });
 
 

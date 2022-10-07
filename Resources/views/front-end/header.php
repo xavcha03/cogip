@@ -19,7 +19,7 @@
             <a href="/contact">Contacts</a>
         </nav>
         <nav class="login">
-        <a href="/Sign up" class="signUp">Sign up</a>
+        <a href="/dashboard" class="signUp">Sign up</a>
         <a href="/dashboard">Login</a>   
         </nav>
     </header>
