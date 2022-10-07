@@ -1,6 +1,6 @@
 
 <section class="slogan">
-    <h3>WORKER BETTER IN YOUR COMPANY</h3>
+    <h3 class="worker" >WORKER BETTER IN YOUR COMPANY</h3>
     <img class="img_work" src="assets/img/Project Manager (19) 1.png" alt="cogip logo" alt="icone work ">
     <img class="img_rectangle_17" src="assets/img/Rectangle 17.png">
 </section>

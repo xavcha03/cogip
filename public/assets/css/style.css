@@ -1,11 +1,12 @@
 .header {
-  width: 100%;
   height: 56px;
   margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 120px;
   padding-top: 50px;
   padding-left: -40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #F9DE4E;
   color: #000000;
@@ -18,17 +19,24 @@
 
 .nav {
   display: flex;
-  flex-direction: row;
   gap: 21px;
-  line-height: 100px;
+  align-items: center;
+}
+.nav h2 {
+  margin: 0;
+  padding: 0;
 }
 .nav a {
   color: #000000;
+  padding: 0.5em;
 }
 
-.button {
-  width: 100%;
+.linkHome {
   border: solid 1px black;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .login {
@@ -77,19 +85,32 @@
   padding-bottom: 40px;
 }
 
+main {
+  position: relative;
+}
+
 .container {
   width: 1290px;
   padding: 10px 10px;
-  position: relative;
 }
-.container::after {
+.container::before {
+  background-image: url(../img/ProjectM.png);
   content: "";
   width: 177px;
   height: 138px;
-  background-color: red;
   position: absolute;
   top: 50%;
-  right: -2;
+  right: 0;
+}
+.container::after {
+  background-image: url(../img/lamp.png);
+  background-repeat: no-repeat;
+  content: "";
+  width: 181px;
+  height: 141px;
+  position: absolute;
+  top: 65%;
+  left: 0;
 }
 
 .title {
@@ -136,6 +157,7 @@ h2 {
   line-height: 73px;
   margin-left: 120px;
   margin-bottom: 30px;
+  margin-top: 43px;
 }
 
 .row tr:nth-child(even) {
@@ -163,14 +185,21 @@ hr {
 .slogan {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 500px;
   padding-top: 200px;
+  padding-bottom: 180px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
   font-size: 68px;
   line-height: 82px;
   position: relative;
+}
+.slogan .worker {
+  width: 511px;
+  height: 246px;
+  padding-left: 120px;
 }
 .slogan .img_work {
   position: absolute;

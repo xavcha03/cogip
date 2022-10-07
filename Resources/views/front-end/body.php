@@ -102,7 +102,7 @@ require_once(__ROOT__.'/Resources/views/front-end/header.php');
                 </tbody>
                 </table>
             </section>
-                <img class="lamp" src="assets/img/lamp.png" alt="icone lamp">
+                <!-- <img class="lamp" src="assets/img/lamp.png" alt="icone lamp"> -->
 
                 <section class="table">
                     <h2>Last companies</h2>

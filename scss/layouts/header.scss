@@ -1,11 +1,13 @@
 .header{
-    width: 100%;
+    
     height: 56px;
     margin:0 auto;
+    padding-left: 120px;
+    padding-right: 120px;
     padding-top: 50px;
     padding-left: -40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: $color-primary;
     color: $color-secondary;
@@ -25,19 +27,34 @@
 
  .nav{
     display: flex;
-    flex-direction: row;
     gap: 21px;
-    line-height: 100px;
+    align-items: center;
+
+    h2{
+        margin: 0;
+        padding: 0;
+    }
         a{
         color:$color-secondary;
+        padding: 0.5em;
         }
 
 }
 
-.button{
-    width: 100%;
-    border: solid 1px black;
+.linkHome{
+        border: solid 1px black;
+
+        
+
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+
 }
+
+
 
 
 

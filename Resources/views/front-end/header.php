@@ -14,7 +14,7 @@
         
         <nav class="nav">
         <h2>COGIP</h2>
-            <a class="button" href="/home" class="button">Home</a>
+            <a class="linkHome" href="/home">Home</a>
             <a href="/invoices">Invoices</a>
             <a href="/companies">Companies</a>
             <a href="/contact">Contacts</a>
