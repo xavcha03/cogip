@@ -61,7 +61,7 @@ class UserModel extends Model
         $stm = $this->db->prepare($query);
         $stm->bindParam(":id", $userID);
         $stm->execute();
-        header("Location:/dashboard/admin");
+        header('location:/dashboard/admin/listUsers');
     }
 
     public function countUsers()
@@ -70,5 +70,28 @@ class UserModel extends Model
         $stm = $this->db->prepare($query);
         $stm->execute();
         return $stm->fetch()[0];
+    }
+
+    public function getAllRoles()
+    {
+        $query = "SELECT * FROM roles";
+        $stm = $this->db->prepare($query);
+        $stm->execute();
+
+        $result = $stm->fetchAll();
+        return $result;
+    }
+
+    public function addRole($role)
+    {
+        //Création de la requete
+        $query = "INSERT INTO roles (name, created_at, updated_at) VALUES (:name, NOW(), NOW())";
+        //Préparation
+        $stm = $this->db->prepare($query);
+        //Ajout des données
+        $stm->bindParam(":name", $role);
+        //execution de la requete
+        $isDone = $stm->execute();
+        return $isDone;
     }
 }

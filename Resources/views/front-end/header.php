@@ -11,9 +11,10 @@
 </head>
 <body>
     <header class="header">
-        <h2>COGIP</h2>
+        
         <nav class="nav">
-            <a href="/home" class="button">Home</a>
+        <h2>COGIP</h2>
+            <a class="linkHome" href="/home">Home</a>
             <a href="/invoices">Invoices</a>
             <a href="/companies">Companies</a>
             <a href="/contact">Contacts</a>
@@ -24,7 +25,7 @@
         </nav>
     </header>
     <div class="section">
-            <h3 class="manager">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h3>
+            <p class="manager">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</p>
             <img class="img_Pmanager" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
             <!-- <img class="img_rectangle" src="/assets/img/Rectangle 10.png"> -->
         </div>

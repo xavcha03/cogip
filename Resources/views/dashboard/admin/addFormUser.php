@@ -6,7 +6,7 @@ require_once(__ROOT__ . '/Resources/views/dashboard/parts/top.php');
 <section class="contentSection">
     <h3 class="contentSection__title">Add user form</h3>
     <hr>
-    <!-- <a href="/dashboard/companies/type">Company Type</a> -->
+    <a href="/dashboard/admin/allRole">User Role</a>
     <a href="/dashboard/admin/listUsers">All Users</a>
     <form class="form" method="post" action="/dashboard/admin/user">
         <input class="form__input" type="text" name="first_name" placeholder="first name">

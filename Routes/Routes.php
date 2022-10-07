@@ -134,5 +134,16 @@ $router->get('/dashboard/admin/delete/(\d+)', function ($userID) {
     (new UserController)->deleteUser($userID);
 });
 
+//------------------ROLES
+$router->get('/dashboard/admin/role', function () {
+    (new UserController)->callFormRoles();
+});
+$router->post('/dashboard/admin/role', function () {
+    (new UserController)->addRole();
+});
+$router->get('/dashboard/admin/delete/(\d+)', function ($userID) {
+    (new UserController)->deleteUser($userID);
+});
+
 
 $router->run();

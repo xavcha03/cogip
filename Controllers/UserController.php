@@ -8,7 +8,7 @@ use App\Model\UserModel;
 
 class UserController extends Controller
 {
-
+    //----------USERS
     //Display add user
     public function callFormUser()
     {
@@ -40,13 +40,33 @@ class UserController extends Controller
     {
         $model = new UserModel();
         $users = $model->listUser();
-        $this->view('dashboard/admin/listusers', ['users' => $users]);
+        $this->view('dashboard/admin/listUsers', ['users' => $users]);
     }
 
     public function deleteUser($userID)
     {
         $model = new UserModel();
         $model->deleteUser($userID);
-        header('location:/dashboard/admin/list');
+        header('location:/dashboard/admin/listUsers');
+    }
+
+    //----------ROLES
+    public function callFormRoles()
+    {
+        //Get all contact in BDD
+        $model = new UserModel();
+        $roles = $model->getAllRoles();
+        
+        $this->view('dashboard/admin/allRole', ["roles" => $roles]);
+    }
+
+    public function addRole()
+    {
+        //get data from form
+        $role = $_POST['typeCompany'];
+
+        $model = new UserModel();
+        $model->addRole($role);
+        header('Location:/dashboard/admin/allRole');
     }
 }
