@@ -9,17 +9,26 @@
   align-items: center;
   background-color: #F9DE4E;
   color: #000000;
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 23px;
 }
 
-.section {
-  background-image: url("../img/rectangle.png");
-  background-repeat: no-repeat;
-  background-position: bottom 0 center;
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  line-height: 100px;
+}
+.nav a {
+  color: #000000;
+}
+
+.button {
+  width: 100%;
+  border: solid 1px black;
 }
 
 .login {
@@ -28,16 +37,6 @@
   gap: 20px;
 }
 .login a {
-  color: #000000;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  line-height: 100px;
-}
-.nav a {
   color: #000000;
 }
 
@@ -53,24 +52,44 @@
   background-color: #FFFFFF;
 }
 
+.section {
+  background-image: url("../img/rectangle.png");
+  background-repeat: no-repeat;
+  background-position: bottom 0 center;
+  background-color: #F9DE4E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .manager {
-  width: 100px;
   padding: 130px;
-  margin-left: 100px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  font-size: 65px;
+  font-size: 64px;
 }
 
 .img_Pmanager {
   width: 800px;
   left: 681px;
   top: 142px;
+  padding-bottom: 40px;
 }
 
 .container {
+  width: 1290px;
   padding: 10px 10px;
+  position: relative;
+}
+.container::after {
+  content: "";
+  width: 177px;
+  height: 138px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  right: -2;
 }
 
 .title {
@@ -88,7 +107,6 @@
 table {
   width: 1193px;
   margin-left: 120px;
-  position: relative;
 }
 
 tr {

@@ -1,5 +1,18 @@
 .container{
+    width: 1290px;
     padding: 10px 10px;
+    position: relative;
+
+       &::after{
+            //background-image: url(.public/images/);
+            content:"";
+            width:177px;
+            height: 138px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            right: -2;// ancorare le immagini  project e lamp alla sezione table---verificare il rettangolo 
+        }
 }
 
 
@@ -19,7 +32,6 @@
 table{
     width: 1193px;
     margin-left: 120px;
-    position: relative;
         // .project::after{
         //     width:300px;
         //     position: absolute;

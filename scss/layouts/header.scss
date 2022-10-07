@@ -9,11 +9,12 @@
     align-items: center;
     background-color: $color-primary;
     color: $color-secondary;
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 23px;
+
 
 
     
@@ -22,11 +23,23 @@
     //         flex-direction: column;
  }
 
-.section{
-    background-image: url("../img/rectangle.png");
-    background-repeat: no-repeat;
-    background-position: bottom 0 center;
-    }
+ .nav{
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    line-height: 100px;
+        a{
+        color:$color-secondary;
+        }
+
+}
+
+.button{
+    width: 100%;
+    border: solid 1px black;
+}
+
+
 
 .login{
     display: flex;
@@ -37,16 +50,7 @@
         }
 }
 
-.nav{
-    display: flex;
-    flex-direction: row;
-    gap:20px;
-    line-height: 100px;
-        a{
-        color:$color-secondary;
-        }
 
-}
 
 .signUp{
     width: 100.76px;
@@ -60,19 +64,27 @@
     background-color: $color-white;
 }
 
+.section{
+    background-image: url("../img/rectangle.png");
+    background-repeat: no-repeat;
+    background-position: bottom 0 center;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+
 .manager{
-    width: 100px;
     padding: 130px;
-    margin-left: 100px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
-    font-size: 65px;
+    font-size: 64px;
 }
 .img_Pmanager{
     width: 800px;
-
     left: 681px;
     top: 142px;
+    padding-bottom:40px;
 }
 

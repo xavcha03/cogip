@@ -50,7 +50,7 @@ require_once(__ROOT__.'/Resources/views/front-end/header.php');
             </tbody>
             </table>
         </section>
-            <img class="project" src="assets/img/Project Manager (16) 1.png" alt="icone project">
+            <!-- <img class="project" src="assets/img/Project Manager (16) 1.png" alt="icone project"> -->
             <section class="table">
                 <h2>Last Contacts</h2>
                 <table>
