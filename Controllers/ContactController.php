@@ -15,7 +15,7 @@ class ContactController extends Controller
         //Get all contact in BDD
         $model = new CompanyModel();
         $companies = $model->getAllCompanies();
-        $this->view('dashboard/contact/addform', ["companies" => $companies]);
+        $this->view('dashboard/contact/addForm', ["companies" => $companies]);
     }
 
 

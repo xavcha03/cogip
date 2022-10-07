@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__ . '/Resources/views/dashBoard/parts/top.php');
+require_once(__ROOT__ . '/Resources/views/dashboard/parts/top.php');
 ?>
 
 <section class="contentSection">
@@ -34,5 +34,5 @@ require_once(__ROOT__ . '/Resources/views/dashBoard/parts/top.php');
 </section>
 
 <?php
-require_once(__ROOT__ . '/Resources/views/dashBoard/parts/bottom.php');
+require_once(__ROOT__ . '/Resources/views/dashboard/parts/bottom.php');
 ?>

@@ -7,7 +7,7 @@ use App\Model\CompanyModel;
 use App\Model\ContactModel;
 use App\Model\InvoiceModel;
 
-class DashBoardController extends Controller
+class DashboardController extends Controller
 {
     public function statistiques()
     {

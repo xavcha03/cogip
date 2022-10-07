@@ -7,7 +7,7 @@ use App\Controllers\HomeController;
 use App\Controllers\CompaniesController;
 use App\Controllers\ConfigController;
 use App\Controllers\ContactController;
-use App\Controllers\DashBoardController;
+use App\Controllers\DashboardController;
 use App\Controllers\InvoiceController;
 
 $router = new Router();
@@ -31,7 +31,7 @@ $router->get('/home', function () {
  * dashboard Home
  */
 $router->get('/dashboard', function () {
-    (new DashBoardController)->statistiques();
+    (new DashboardController)->statistiques();
 });
 
 /**
