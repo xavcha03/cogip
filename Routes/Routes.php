@@ -7,7 +7,7 @@ use App\Controllers\HomeController;
 use App\Controllers\CompaniesController;
 use App\Controllers\ConfigController;
 use App\Controllers\DashBoardController;
-use App\Controllers\InvoicesController;
+use App\Controllers\UserController;
 
 $router = new Router();
 
@@ -39,13 +39,6 @@ $router->get('/dashboard', function () {
 $router->get('/dashboard/addcompany', function () {
     (new CompaniesController)->callFormCompany();
 });
-
-
-// Add form invoices
-$router->get('/dashboard/invoice', function () {
-    (new CompaniesController)->callFormInvoices();
-});
-
 
 
 
@@ -91,14 +84,27 @@ $router->get('/dashboard/companies/delete/(\d+)', function ($companyId) {
 $router->get('/dashboard/companies', function () {
     (new CompaniesController)->updateCompany();
 });
-// add invoices
-$router->post('/dashboard/invoice/addInvoices', function () {
-    (new CompaniesController)->addInvoices();
-});
 
 //-------------------- CONFIG
 $router->get('/install', function () {
     (new ConfigController)->install();
+});
+
+//---------------------USERS
+
+$router->get('/dashboard/signup', function () {
+    (new UserController)->addFormSignUp();
+});
+
+$router->post('/dashboard/signup', function () {
+    (new UserController)->addUser();
+});
+
+$router->get('/dashboard/signup/list', function () {
+    (new UserController)->listUser();
+});
+$router->get('/dashboard/signup/delete/(\d+)', function ($userID) {
+    (new UserController)->deleteUser($userID);
 });
 
 $router->run();
