@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__ . '/Resources/views/front-end/header.php');
+require_once('header.php');
 ?>
 
 <main>
@@ -101,5 +101,5 @@ require_once(__ROOT__ . '/Resources/views/front-end/header.php');
 </main>
 
 <?php
-require_once(__ROOT__ . '/Resources/views/front-end/footer.php');
+require_once('footer.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__ . '/Resources/views/dashboard/parts/top.php');
+require_once('parts/top.php');
 ?>
 <!-- section resume -->
 <section class="resume">
@@ -110,5 +110,5 @@ require_once(__ROOT__ . '/Resources/views/dashboard/parts/top.php');
     </div>
 </section>
 <?php
-require_once(__ROOT__ . '/Resources/views/dashboard/parts/bottom.php');
+require_once('parts/bottom.php');
 ?>
