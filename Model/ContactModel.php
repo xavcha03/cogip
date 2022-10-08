@@ -18,7 +18,7 @@ class ContactModel extends Model
         $stm->execute();
     }
 
-    public function listContact()
+    public function listContact($limit = null, $offset = null, $orderBy = null, $order = 'ASC')
     {
         $query =
             "SELECT 
@@ -27,6 +27,16 @@ class ContactModel extends Model
         LEFT JOIN companies
         ON contact.company_id = companies.id
         ";
+
+        //Add order
+        if ($orderBy) {
+            $query .= " ORDER BY " . $orderBy . " " . $order;
+        }
+
+        //Add limit
+        if ($limit) {
+            $query .= " LIMIT " . $limit;
+        }
         $stm = $this->db->prepare($query);
         $stm->execute();
         return $stm->fetchAll();

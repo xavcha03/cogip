@@ -16,15 +16,15 @@ class DashboardController extends Controller
         //Count invoices
         $model = new InvoiceModel();
         $datas['invoiceCount'] = $model->countInvoices();
-        $datas['lastInvoices'] = $model->listInvoice();
+        $datas['lastInvoices'] = $model->listInvoice(10, null, "created_at", "DESC");
         //Count contacts
         $model = new ContactModel();
         $datas['contactCount'] = $model->countContact();
-        $datas['lastContacts'] = $model->listContact();
+        $datas['lastContacts'] = $model->listContact(10, null, "created_at", "DESC");
         //Count companies
         $model = new CompanyModel();
         $datas['companiesCount'] = $model->countCompanies();
-        $datas['lastCompanies'] = $model->getAllCompanies();
+        $datas['lastCompanies'] = $model->getAllCompanies(10, null, "created_at", "DESC");
 
 
 

@@ -92,7 +92,7 @@ class CompanyModel extends Model
         return $result;
     }
 
-    public function getAllCompanies()
+    public function getAllCompanies($limit = null, $offset = null, $orderBy = null, $order = 'ASC')
     {
         $query =
             "SELECT companies.id AS id, 
@@ -106,6 +106,16 @@ class CompanyModel extends Model
         LEFT JOIN types
         ON companies.type_id = types.id 
         ";
+
+        //Add order
+        if ($orderBy) {
+            $query .= " ORDER BY " . $orderBy . " " . $order;
+        }
+
+        //Add limit
+        if ($limit) {
+            $query .= " LIMIT " . $limit;
+        }
         $stm = $this->db->prepare($query);
         $stm->execute();
 

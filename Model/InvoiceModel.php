@@ -15,10 +15,9 @@ class InvoiceModel extends Model
         $stm->bindParam(':id_company', $invoiceData['company_id']);
 
         $stm->execute();
-
     }
 
-    public function listInvoice()
+    public function listInvoice($limit = null, $offset = null, $orderBy = null, $order = 'ASC')
     {
         $query =
             "SELECT 
@@ -27,6 +26,21 @@ class InvoiceModel extends Model
             LEFT JOIN companies
             ON invoices.id_company = companies.id
             ";
+
+        //Add order
+        if ($orderBy) {
+            $query .= " ORDER BY " . $orderBy . " " . $order;
+        }
+
+        //Add limit
+        if ($limit) {
+            $query .= " LIMIT " . $limit;
+        }
+
+       
+
+
+
         $stm = $this->db->prepare($query);
         $stm->execute();
         return $stm->fetchAll();
