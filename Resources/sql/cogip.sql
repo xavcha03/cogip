@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `companies` (
   `id` int NOT NULL,
-  `name` varchar(50) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `type_id` int NOT NULL,
   `country` varchar(50) NOT NULL,
   `tva` varchar(50) NOT NULL,

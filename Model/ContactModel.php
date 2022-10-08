@@ -16,8 +16,6 @@ class ContactModel extends Model
         $stm->bindParam(':company_id', $contact["company_id"]);
 
         $stm->execute();
-
-        header("Location:/dashboard/contact");
     }
 
     public function listContact()
@@ -27,7 +25,7 @@ class ContactModel extends Model
         contact.*, companies.name AS companyName
         FROM contact
         LEFT JOIN companies
-        ON contact.company_id = contact.id
+        ON contact.company_id = companies.id
         ";
         $stm = $this->db->prepare($query);
         $stm->execute();

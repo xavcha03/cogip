@@ -24,6 +24,8 @@ class InvoiceController extends Controller
 
         $model = new InvoiceModel();
         $model->addInvoice($invoiceData);
+
+        header("Location:/dashboard/invoice");
     }
 
     public function list()

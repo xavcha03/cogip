@@ -84,6 +84,12 @@ $router->get('/dashboard/companies', function () {
 $router->get('/install', function () {
     (new ConfigController)->install();
 });
+//Routes permettant d'éffe
+$router->get('/test', function () {
+    (new ConfigController)->test();
+});
+
+
 
 //---------------------CONTACT
 

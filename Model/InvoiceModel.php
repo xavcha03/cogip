@@ -16,7 +16,6 @@ class InvoiceModel extends Model
 
         $stm->execute();
 
-        header("Location:/dashboard/invoice");
     }
 
     public function listInvoice()

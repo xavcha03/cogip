@@ -84,7 +84,7 @@ class CompanyModel extends Model
      */
     public function getAllType()
     {
-        $query = "SELECT * FROM types";
+        $query = "SELECT * FROM types ORDER BY name ASC";
         $stm = $this->db->prepare($query);
         $stm->execute();
 
