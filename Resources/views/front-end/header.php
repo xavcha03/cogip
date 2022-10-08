@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,24 @@
     <link rel="stylesheet" href="/assets/css/style.css ">
     <title>Header</title>
 </head>
+
 <body>
     <header class="header">
-        
+
         <nav class="nav">
-        <h2>COGIP</h2>
-            <a class="linkHome" href="/home">Home</a>
+            <h2>COGIP</h2>
+            <a class="linkHome" href="/">Home</a>
             <a href="/invoices">Invoices</a>
             <a href="/companies">Companies</a>
             <a href="/contact">Contacts</a>
         </nav>
         <nav class="login">
-        <a href="/Sign up" class="signUp">Sign up</a>
-        <a href="/dashboard">Login</a>   
+            <a href="/Sign up" class="signUp">Sign up</a>
+            <a href="/dashboard">Login</a>
         </nav>
     </header>
     <div class="section">
-            <p class="manager">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</p>
-            <img class="img_Pmanager" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
-            <!-- <img class="img_rectangle" src="/assets/img/Rectangle 10.png"> -->
-        </div>
+        <p class="manager">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</p>
+        <img class="img_Pmanager" src="/assets/img/Project Manager (4) 1.png" alt="icone worker">
+        <!-- <img class="img_rectangle" src="/assets/img/Rectangle 10.png"> -->
+    </div>

@@ -16,9 +16,22 @@ $router = new Router();
 $router->get('/', function () {
     (new HomeController)->index();
 });
-//acceuil
-$router->get('/home', function () {
-    (new HomeController)->test();
+//Invoices list
+$router->get('/invoices', function () {
+    (new HomeController)->listInvoices();
+});
+//Invoices list with offset
+$router->get('/invoices/(\d+)', function ($page) {
+    (new HomeController)->listInvoices($page);
+});
+
+//companies list
+$router->get('/companies', function () {
+    (new HomeController)->listCompanies();
+});
+//Invoices list with offset
+$router->get('/companies/(\d+)', function ($page) {
+    (new HomeController)->listCompanies($page);
 });
 
 

@@ -116,6 +116,10 @@ class CompanyModel extends Model
         if ($limit) {
             $query .= " LIMIT " . $limit;
         }
+        //Add offset
+        if ($offset) {
+            $query .= " OFFSET " . ($limit * ($offset - 1));
+        }
         $stm = $this->db->prepare($query);
         $stm->execute();
 

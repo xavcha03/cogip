@@ -21,7 +21,7 @@ class InvoiceModel extends Model
     {
         $query =
             "SELECT 
-            invoices.*, companies.name AS companyName
+            invoices.*, companies.name AS companyName, companies.id AS companyId
             FROM invoices
             LEFT JOIN companies
             ON invoices.id_company = companies.id
@@ -37,7 +37,12 @@ class InvoiceModel extends Model
             $query .= " LIMIT " . $limit;
         }
 
-       
+        //Add offset
+        if ($offset) {
+            $query .= " OFFSET " . ($limit * ($offset - 1));
+        }
+
+
 
 
 
